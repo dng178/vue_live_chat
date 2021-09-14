@@ -1,0 +1,108 @@
+.exit-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #6588DE;
+    border-radius: 14px;
+    height: 20px;
+    width: 20px;
+    padding-left: 2px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.title-info {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    text-align: center;
+    color: #6588DE;
+    margin-top: 15px;
+}
+
+.ava-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15px;
+}
+
+.ava-info>img {
+    width: 70px;
+    height: 70px;
+    align-items: center;
+    border-radius: 100%;
+    background-blend-mode: normal;
+    border: 4px solid #F7B6B4;
+}
+
+.detail-info {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #6588DE;
+    padding-top: 15px;
+}
+
+.job-info {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+    color: #52585D;
+}
+
+.contact-detail {
+    display: flex;
+    padding-top: 10px;
+    justify-content: space-evenly;
+}
+
+.contact-status {
+    display: grid;
+    grid-template-columns: repeat(3, 17px);
+    align-items: center;
+    background: #6588DE;
+    border-radius: 14px;
+    height: 20px;
+    width: 88px;
+    padding-left: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.call-option {
+    display: grid;
+    grid-template-columns: repeat(3, 17px);
+    align-items: center;
+    background: #F7B6B4;
+    border-radius: 14px;
+    height: 20px;
+    width: 88px;
+    padding-left: 8px;
+    font-size: 10px;
+    font-weight: bold;
+    color: white;
+}
+
+.contact-status p,
+.call-option p {
+    padding-top: 2px;
+}
+
+.call-option p {
+    padding-left: 10px;
+}
+
+.contact-info {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D0D9DF;
+}

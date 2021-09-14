@@ -1,0 +1,43 @@
+.info-option-container {}
+
+.mute-option p,
+.star-option p {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #6588DE;
+    margin-right: 120px;
+}
+
+.mute-option,
+.star-option {
+    display: flex;
+    padding: 20px 0px 20px 10px;
+    border-bottom: 1px solid #D0D9DF;
+}
+
+.block-button button,
+.delete-button button {
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #6588DE;
+    box-sizing: border-box;
+    border-radius: 8px;
+    background: transparent;
+    color: #6588DE;
+    height: 39px;
+    width: 95%;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.block-button,
+.delete-button {
+    display: flex;
+    padding: 10px 0px 10px 0px;
+}

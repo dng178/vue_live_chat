@@ -1,0 +1,39 @@
+.media-title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 27px;
+    text-align: center;
+    color: #6588DE;
+    padding-top: 10px;
+}
+
+.media-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-gap: 10px;
+    justify-content: center;
+}
+
+.media-gallery>img {
+    border-radius: 8px;
+    width: 75px;
+    height: 75px;
+}
+
+.more-image {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #6588DE;
+    padding-top: 25px;
+}
+
+.media-container {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #D0D9DF;
+}

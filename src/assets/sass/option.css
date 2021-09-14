@@ -1,0 +1,48 @@
+#option {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 0 0 0 10px;
+    grid-template-columns: repeat(4, 48px);
+    grid-template-rows: 70px;
+    grid-gap: 25px;
+    height: 85px;
+    padding-top: 10px;
+    background: #E3F6FC;
+}
+
+.option-icon {
+    grid-column: span 1;
+    padding-left: 13px;
+    padding-top: 20px;
+}
+
+#option .option-icon:hover {
+    border-bottom: 3px solid #6588DE;
+    border-radius: 2px;
+}
+
+#option .option-icon.active {
+    border-bottom: 3px solid #6588DE;
+    border-radius: 2px;
+}
+
+#user:hover,
+#user .active,
+#star:hover,
+#star .active,
+#group:hover,
+#group .active,
+#search:hover,
+#search .active {
+    fill: #6588DE;
+    cursor: pointer;
+}
+
+#user,
+#star,
+#group,
+#search {
+    fill: rgba(175, 188, 198, 0.5);
+}
