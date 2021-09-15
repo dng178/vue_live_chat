@@ -24,7 +24,6 @@
 
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import ChatForm from "./components/chat_form.vue";
 import ChatMessageList from "./components/chat_message_list.vue";
 import ChatTitle from "./components/chat_title.vue";
@@ -52,9 +51,15 @@ export default {
 };
 </script>
 
-<style lang="sass">
- @import "./src/assets/sass/main.sass"
+<style>
  
-#app 
-  font-family: 'Poppins', 'Roboto', sans-serif
+ @import './assets/sass/main.scss';
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+ 
+#app {
+  width: 100%;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  font-size: 10px;
+}
 </style>

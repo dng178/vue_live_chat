@@ -34,3 +34,6 @@
                     </div>
                 </div>
 </template>
+<style>
+    @import '../assets/sass/contact_info.scss';
+</style>

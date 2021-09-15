@@ -14,12 +14,12 @@
 }
 
 .time-stamp-text {
-    font-size: 10px;
+    font-size: 13px;
     background-color: #6588DE;
     width: 90px;
     height: 20px;
     color: white;
-    padding: 4px 0px 0px 22px;
+    padding: 6px 0px 0px 25px;
     border-radius: 14px;
     border: 1px #eee;
     position: absolute;
@@ -63,10 +63,11 @@
 
 .username {
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: bold;
     font-size: 16px;
     line-height: 18px;
     color: #52585D;
+    font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 .message-text {
@@ -83,7 +84,7 @@
 .message-time {
     display: grid;
     justify-content: end;
-    font-size: 1.1rem;
+    font-size: 12px;
     color: #777;
 }
 

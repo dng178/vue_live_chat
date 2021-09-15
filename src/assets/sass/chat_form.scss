@@ -10,15 +10,12 @@
     border-radius: 0 0 10px 0;
     padding-left: 25px;
     padding-right: 17px;
-    /* background-color: antiquewhite; */
     margin-top: 10px;
-    /* width: 100%; */
-    /* position: relative; */
 }
 
 #chat-form input {
-    font-weight: 300;
-    font-size: 12px;
+    font-weight: bold;
+    font-size: 14px;
     line-height: 18px;
     outline: none;
     padding: 10px;
@@ -30,6 +27,7 @@
     height: 40px;
     padding-left: 100px;
     padding-right: 120px;
+    font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 #chat-form ::placeholder {
@@ -58,12 +56,13 @@
     background: #6588DE;
     border-radius: 14px;
     color: white;
-    font-weight: 600;
-    font-size: 12px;
+    font-weight: bold;
+    font-size: 14px;
     line-height: 18px;
     border: 2px solid #ddd;
     border-left: none;
     cursor: pointer;
+    font-family: 'Poppins', 'Roboto', sans-serif;
 }
 
 #chat-form button svg {

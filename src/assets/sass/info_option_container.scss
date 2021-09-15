@@ -1,5 +1,3 @@
-.info-option-container {}
-
 .mute-option p,
 .star-option p {
     font-family: Poppins;
@@ -15,12 +13,22 @@
 .mute-option,
 .star-option {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px 0px 20px 10px;
     border-bottom: 1px solid #D0D9DF;
 }
 
+.mute-option svg,
+.star-option svg {
+    margin-right: 5px;
+}
+
 .block-button button,
 .delete-button button {
+    font-family: 'Poppins', 'Roboto', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
     display: flex;
     justify-self: flex-start;
     align-items: center;
@@ -34,6 +42,7 @@
     width: 95%;
     padding-left: 10px;
     cursor: pointer;
+    margin-top: 5px;
 }
 
 .block-button,

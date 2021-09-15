@@ -32,3 +32,6 @@
 
             </div>
 </template>
+<style>
+    @import '../assets/sass/chat_message_list.scss';
+</style>

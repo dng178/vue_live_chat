@@ -30,3 +30,6 @@
                     </div>
                 </div>
 </template>
+<style>
+    @import '../assets/sass/info_option_container.scss';
+</style>

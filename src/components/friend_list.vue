@@ -154,3 +154,6 @@
                 </div>
             </div>
 </template>
+<style>
+    @import '../assets/sass/friend_list.scss';
+</style>

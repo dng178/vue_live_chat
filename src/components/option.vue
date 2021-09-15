@@ -25,3 +25,6 @@
                 </div>
             </div>
 </template>
+<style>
+    @import '../assets/sass/option.scss';
+</style>

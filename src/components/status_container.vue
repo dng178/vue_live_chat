@@ -31,3 +31,6 @@
 
             </div>
 </template>
+<style>
+    @import '../assets/sass/status_container.scss';
+</style>

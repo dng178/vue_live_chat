@@ -29,3 +29,6 @@
                 </div>
             </div>
 </template>
+<style>
+    @import '../assets/sass/chat_form.scss';
+</style>
