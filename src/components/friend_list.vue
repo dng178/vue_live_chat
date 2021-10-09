@@ -1,159 +1,146 @@
 <template>
     <div id="friend-list">
-                <div class="conversation-list">
-                    <div class="conversation">
+                <div class="conversation-list" v-for="item in friendList" :key="item.id" >
+                
+                    <div class="conversation" :key="item.id"
+                        :class="item.class"
+                        @click="set_active_id(item.id); addNew(item.id)">
                         <div class="avatar">
                             <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
                         </svg>
-                            <img src="../assets/image/think.png" alt="Friend-1" />
+                            <img v-bind:src="item.friendImage" />
                         </div>
                         <div class="title-text">
-                            Friend-1
+                           {{ item.friendName }}
                         </div>
                         <div class="created-date">
-                            Aug 20
+                            {{ item.friendCreatedDate }}
                         </div>
                         <div class="message">
-                            This is a message
+                            {{ item.friendMessage }}
                         </div>
                     </div>
                 </div>
-                <div class="conversation-list">
-                    <div class="conversation">
-                        <div class="avatar">
-                            <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6" cy="6" r="5.5" fill="#FD2828" stroke="white"/>
-                            </svg>
-                            <img src="../assets/image/think.png" alt="Friend-2" />
-                        </div>
-                        <div class="title-text">
-                            Friend-2
-                        </div>
-                        <div class="created-date">
-                            Aug 21
-                        </div>
-                        <div class="message">
-                            This is a message 2
-                        </div>
-                    </div>
-                </div>
-                <div class="conversation-list">
-                    <div class="conversation">
-                        <div class="avatar">
-                            <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
-                        </svg>
-                            <img src="../assets/image/think.png" alt="Friend-3" />
-                        </div>
-                        <div class="title-text">
-                            Friend-3
-                        </div>
-                        <div class="created-date">
-                            Aug 22
-                        </div>
-                        <div class="message">
-                            This is a message 3
-                        </div>
-                    </div>
-                </div>
-                <div class="conversation-list">
-                    <div class="conversation">
-                        <div class="avatar">
-                            <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
-                        </svg>
-                            <img src="../assets/image/think.png" alt="Friend-4" />
-                        </div>
-                        <div class="title-text">
-                            Friend-4
-                        </div>
-                        <div class="created-date">
-                            Aug 23
-                        </div>
-                        <div class="message">
-                            This is a message 4
-                        </div>
-                    </div>
-                </div>
-                <div class="conversation-list">
-                    <div class="conversation">
-                        <div class="avatar">
-                            <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
-                        </svg>
-                            <img src="../assets/image/think.png" alt="Friend-5" />
-                        </div>
-                        <div class="title-text">
-                            Friend-5
-                        </div>
-                        <div class="created-date">
-                            Aug 24
-                        </div>
-                        <div class="message">
-                            This is a message 5
-                        </div>
-                    </div>
-                </div>
-                <div class="conversation-list">
-                    <div class="conversation">
-                        <div class="avatar">
-                            <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
-                        </svg>
-                            <img src="../assets/image/think.png" alt="Friend-6" />
-                        </div>
-                        <div class="title-text">
-                            Friend-6
-                        </div>
-                        <div class="created-date">
-                            Aug 25
-                        </div>
-                        <div class="message">
-                            This is a message 6
-                        </div>
-                    </div>
-                </div>
-                <div class="conversation-list">
-                    <div class="conversation">
-                        <div class="avatar">
-                            <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
-                        </svg>
-                            <img src="../assets/image/think.png" alt="Friend-7" />
-                        </div>
-                        <div class="title-text">
-                            Friend-7
-                        </div>
-                        <div class="created-date">
-                            Aug 26
-                        </div>
-                        <div class="message">
-                            This is a message 7
-                        </div>
-                    </div>
-                </div>
-                <div class="conversation-list">
-                    <div class="conversation">
-                        <div class="avatar">
-                            <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
-                        </svg>
-                            <img src="../assets/image/think.png" alt="Friend-8" />
-                        </div>
-                        <div class="title-text">
-                            Friend-8
-                        </div>
-                        <div class="created-date">
-                            Aug 26
-                        </div>
-                        <div class="message">
-                            This is a message 8
-                        </div>
-                    </div>
-                </div>
+                
             </div>
 </template>
-<style>
+<script>
+import {mapGetters} from "vuex";
+export default {
+    data() {
+    return {
+      friendList: [
+        { 
+            id :0,
+            friendName: 'apple', 
+            friendMessage: 'This is a message from apple',
+            friendCreatedDate: 'Aug 26 2021',
+            friendImage: require('../assets/image/think.png'),
+            class: 'active',
+            userName: 'user123', 
+            userMessage: 'thanks apple',
+            userCreatedDate: 'Aug 27 2021',
+            userImage: require('../assets/image/SKR.jpg'),
+        },
+        { 
+            id: 1,
+            friendName: 'orange', 
+            friendMessage: 'This is a message from orange',
+            friendCreatedDate: 'Aug 27 2021',
+            friendImage: require('../assets/image/think.png'),
+            class: '',
+            userName: 'user123', 
+            userMessage: 'thanks orange',
+            userCreatedDate: 'Aug 28 2021',
+            userImage: require('../assets/image/SKR.jpg'),
+        },
+        { 
+            id: 2,
+            friendName: 'pineapple', 
+            friendMessage: 'This is a message from pineapple',
+            friendCreatedDate: 'Aug 28 2021',
+            friendImage: require('../assets/image/think.png'),
+            class: '',
+            userName: 'user123', 
+            userMessage: 'thanks pineapple',
+            userCreatedDate: 'Aug 29 2021',
+            userImage: require('../assets/image/SKR.jpg'),
+        },
+        { 
+            id: 3,
+            friendName: 'berry', 
+            friendMessage: 'This is a message from berry',
+            friendCreatedDate: 'Aug 29 2021',
+            friendImage: require('../assets/image/think.png'),
+            class: '',
+            userName: 'user123', 
+            userMessage: 'thanks berry',
+            userCreatedDate: 'Aug 30 2021',
+            userImage: require('../assets/image/SKR.jpg'),
+        },
+        { 
+            id: 4,
+            friendName: 'blueberry', 
+            friendMessage: 'This is a message from blueberry',
+            friendCreatedDate: 'Aug 30 2021',
+            friendImage: require('../assets/image/think.png'),
+            class: '',
+            userName: 'user123', 
+            userMessage: 'thanks blueberry',
+            userCreatedDate: '1 Sep 2021',
+            userImage: require('../assets/image/SKR.jpg'),
+        },
+        { 
+            id: 5,
+            friendName: 'banana', 
+            friendMessage: 'This is a message from banana',
+            friendCreatedDate: 'Aug 28 2021',
+            friendImage: require('../assets/image/think.png'),
+            class: '',
+            userName: 'user123', 
+            userMessage: 'thanks banana',
+            userCreatedDate: '2 Sep 2021',
+            userImage: require('../assets/image/SKR.jpg'),
+        },
+        { 
+            id: 6,
+            friendName: 'tomato', 
+            friendMessage: 'This is a message from tomato',
+            friendCreatedDate: 'Sep 1 2021',
+            friendImage: require('../assets/image/think.png'),
+            class: '',
+            userName: 'user123', 
+            userMessage: 'thanks tomato',
+            userCreatedDate: '2 Sep 2021',
+            userImage: require('../assets/image/SKR.jpg'),
+        },],
+    previous_active_id: 1,
+    }
+  },
+  computed: {
+            ...mapGetters([
+                'user',
+                'friends'
+            ]),
+        },
+  methods: {
+      set_active_id(id) {
+        if (this.previous_active_id === id) return 
+        this.friendList.find(item => item.id === this.previous_active_id).class = '' 
+        this.friendList.find(item => item.id === id).class = 'active' 
+        this.previous_active_id = id 
+        },
+
+        addNew(ID){
+            this.$store.commit('updateFriends', this.friendList.find(x => x.id == ID))
+        }
+    },
+    
+}
+</script>
+
+
+<style scoped>
     @import '../assets/sass/friend_list.scss';
 </style>

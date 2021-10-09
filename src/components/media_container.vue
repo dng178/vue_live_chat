@@ -19,6 +19,6 @@
                     </div>
                 </div>
 </template>
-<style>
+<style scoped>
     @import '../assets/sass/media_container.scss';
 </style>

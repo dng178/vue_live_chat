@@ -6,6 +6,6 @@
 
             </div>
 </template>
-<style>
+<style scoped>
     @import '../assets/sass/chat_title.scss';
 </style>

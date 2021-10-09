@@ -1,6 +1,6 @@
 
 <template>
-    <div class="chat-container">
+    <div class="chat-container" @click="clickOut">
         <div class="left-container">
             <StatusContainer />
             <FriendList />
@@ -47,7 +47,20 @@ export default {
     Option,
     StatusContainer
   },
-  
+  methods:{
+    clickOut:  function(event) {
+    if (!event.target.matches('.dropbtn')) {
+        var dropdowns = document.getElementsByClassName("dropdown-content");
+        var i;
+            for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+            }
+            }
+        }
+    }
+  }
 };
 </script>
 
@@ -58,8 +71,6 @@ export default {
  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
  
 #app {
-  width: 100%;
-  font-family: 'Poppins', 'Roboto', sans-serif;
-  font-size: 10px;
+  
 }
 </style>

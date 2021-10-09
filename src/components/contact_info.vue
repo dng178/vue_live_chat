@@ -34,6 +34,6 @@
                     </div>
                 </div>
 </template>
-<style>
+<style scoped>
     @import '../assets/sass/contact_info.scss';
 </style>

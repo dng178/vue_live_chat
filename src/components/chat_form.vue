@@ -11,8 +11,7 @@
                     <circle cx="2.5" cy="2.5" r="2.5" transform="rotate(-90 2.5 2.5)" fill="#6588DE"/>
                 </svg>
                 </div>
-                <!-- <i class="fas fa-paperclip" id="attachment_icon"></i>
-            <i class="fas fa-microphone" id="micro_icon"></i> -->
+            
                 <div class="text-box">
                     <input type="text" placeholder="Type a new message..." />
                     <svg class="attachment_icon" width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -29,6 +28,6 @@
                 </div>
             </div>
 </template>
-<style>
+<style scoped>
     @import '../assets/sass/chat_form.scss';
 </style>

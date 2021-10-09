@@ -3,25 +3,27 @@
 
                 <div class="message-row your-message">
                     <div class="username">
-                        Beastmaster69
+                        {{friends.userName ? friends.userName : ''}}
                     </div>
                     <div class="message-content">
                         <div class="message-text">
-                            yeah bro!
-                            <div class="message-time">Aug 20</div>
+                             {{friends.userMessage ? friends.userMessage : ''}}
+                            <div class="message-time">{{friends.userCreatedDate ? friends.userCreatedDate : ''}}</div>
                         </div>
-                        <img src="../assets/image/SKR.jpg" alt="Your-name" />
+                        <img v-bind:src="friends.userImage" />
                     </div>
                 </div>
                 <div class="message-row other-message">
                     <div class="username">
-                        User-1
+                        {{friends.friendName ? friends.friendName : ''}}
                     </div>
                     <div class="message-content">
-                        <img src="../assets/image/think.png" alt="user-1" />
+                        <img v-bind:src="friends.friendImage" />
                         <div class="message-text">
-                            u ok bro ? asdasdasd asdasdas asdasdsad asdasdas asdasdas asdasdas adasd
-                            <div class="message-time">Aug 20</div>
+
+                            {{friends.friendMessage ? friends.friendMessage : ''}}
+                            
+                            <div class="message-time">{{friends.friendCreatedDate ? friends.friendCreatedDate : ''}}</div>
                         </div>
 
                     </div>
@@ -32,6 +34,26 @@
 
             </div>
 </template>
-<style>
+
+<script>
+import {mapGetters} from "vuex";
+
+export default ({
+    computed:{
+            ...mapGetters([
+                'user',
+                'friends'
+            ]),
+        
+    },
+    methods:{
+        valueMessage() {
+        console.log(this.friends);  
+    }
+    }
+})
+</script>
+
+<style scoped>
     @import '../assets/sass/chat_message_list.scss';
 </style>

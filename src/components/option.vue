@@ -25,6 +25,6 @@
                 </div>
             </div>
 </template>
-<style>
+<style scoped>
     @import '../assets/sass/option.scss';
 </style>

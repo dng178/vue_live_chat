@@ -30,6 +30,6 @@
                     </div>
                 </div>
 </template>
-<style>
+<style scoped>
     @import '../assets/sass/info_option_container.scss';
 </style>

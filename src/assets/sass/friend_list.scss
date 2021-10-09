@@ -1,7 +1,7 @@
 #friend-list {
     overflow-y: scroll;
     border-radius: 10px 10px 0px 0px;
-    height: calc(100% - 185px);
+    height: calc(100% - 206px);
     background: #E3F6FC;
 }
 
@@ -81,7 +81,7 @@
 }
 
 .created-date {
-    font-size: 1rem;
+    font-size: 10px;
 }
 
 .message {
@@ -90,4 +90,26 @@
     overflow-x: hidden;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+
+
+/* Size */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(216, 214, 214);
+    border-radius: 10px;
 }
