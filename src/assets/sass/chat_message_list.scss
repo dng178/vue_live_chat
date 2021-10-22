@@ -5,6 +5,7 @@
     overflow-y: scroll;
     position: relative;
     height: calc(100% - 200px);
+    word-break: break-all;
 }
 
 .message-row {
@@ -22,14 +23,19 @@
     padding: 6px 0px 0px 25px;
     border-radius: 14px;
     border: 1px #eee;
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+.time-stamp {
+    justify-content: center;
+    justify-items: center;
+    padding-left: 60px;
+}
+
 .message-content {
-    display: grid;
+    display: flex;
 }
 
 .your-message {
@@ -79,6 +85,7 @@
     line-height: 150.5%;
     padding: 9px 14px;
     margin-bottom: 5px;
+    max-width: 600px;
 }
 
 .message-time {

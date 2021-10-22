@@ -3,6 +3,9 @@ import App from './App.vue'
 
 import Vuex from 'vuex'
 import store from './store/index';
+import vClickOutside from 'v-click-outside'
+
+Vue.use(vClickOutside)
 
 Vue.use(Vuex)
 

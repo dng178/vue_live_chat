@@ -22,7 +22,6 @@
                         <div class="message-text">
 
                             {{friends.friendMessage ? friends.friendMessage : ''}}
-                            
                             <div class="message-time">{{friends.friendCreatedDate ? friends.friendCreatedDate : ''}}</div>
                         </div>
 

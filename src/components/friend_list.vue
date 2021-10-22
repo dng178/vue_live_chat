@@ -1,10 +1,10 @@
 <template>
     <div id="friend-list">
-                <div class="conversation-list" v-for="item in friendList" :key="item.id" >
+                <div class="conversation-list" v-for="(item, index) in friendList" :key="index" >
                 
                     <div class="conversation" :key="item.id"
-                        :class="item.class"
-                        @click="set_active_id(item.id); addNew(item.id)">
+                        :class="{active: index === activeItem  }"
+                        @click="clickHandler(index); addNew(item.id)">
                         <div class="avatar">
                             <svg class='c-avatar-status' width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="6" cy="6" r="5.5" fill="#46D362" stroke="white"/>
@@ -115,7 +115,8 @@ export default {
             userCreatedDate: '2 Sep 2021',
             userImage: require('../assets/image/SKR.jpg'),
         },],
-    previous_active_id: 1,
+    // previous_active_id: 1,
+    activeItem: 0,
     }
   },
   computed: {
@@ -125,22 +126,19 @@ export default {
             ]),
         },
   methods: {
-      set_active_id(id) {
-        if (this.previous_active_id === id) return 
-        this.friendList.find(item => item.id === this.previous_active_id).class = '' 
-        this.friendList.find(item => item.id === id).class = 'active' 
-        this.previous_active_id = id 
+        clickHandler(idx) {
+            this.activeItem = idx
         },
-
         addNew(ID){
             this.$store.commit('updateFriends', this.friendList.find(x => x.id == ID))
-        }
+        },
+        
     },
     
 }
 </script>
 
 
-<style scoped>
+<style lang="scss" scoped>
     @import '../assets/sass/friend_list.scss';
 </style>
