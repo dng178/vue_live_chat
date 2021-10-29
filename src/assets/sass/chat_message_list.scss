@@ -1,11 +1,14 @@
 #chat-message-list {
-    display: flex;
-    flex-direction: column-reverse;
     padding: 0 20px;
     overflow-y: scroll;
     position: relative;
     height: calc(100% - 200px);
     word-break: break-all;
+}
+
+.message {
+    display: flex;
+    flex-direction: column-reverse;
 }
 
 .message-row {
@@ -20,9 +23,9 @@
     width: 90px;
     height: 20px;
     color: white;
-    padding: 6px 0px 0px 25px;
+    padding: 6px 10px 0px 25px;
     border-radius: 14px;
-    border: 1px #eee;
+    border: 1px white;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -32,9 +35,15 @@
     justify-content: center;
     justify-items: center;
     padding-left: 60px;
+    margin-top: 5%;
 }
 
 .message-content {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.display-message {
     display: flex;
 }
 
@@ -57,14 +66,17 @@
     grid-column-gap: 2px;
 }
 
-.message-row img {
-    border-radius: 100%;
-    height: 40px;
-    width: 40px;
-    grid-row: span 2;
-    bottom: 10px;
-    background-blend-mode: normal;
-    border: 2px solid #F7B6B4;
+.avatar {
+    margin-left: 10px;
+    img {
+        border-radius: 100%;
+        height: 40px;
+        width: 40px;
+        grid-row: span 2;
+        bottom: 10px;
+        background-blend-mode: normal;
+        border: 2px solid #F7B6B4;
+    }
 }
 
 .username {
@@ -85,14 +97,48 @@
     line-height: 150.5%;
     padding: 9px 14px;
     margin-bottom: 5px;
-    max-width: 600px;
+    max-width: 700px;
+    margin-left: 10px;
+    .sendImage {
+        overflow: auto;
+        white-space: nowrap;
+        .viewImg {
+            img {
+                width: 200px;
+                height: 160px;
+                object-fit: cover;
+                border-radius: 15px;
+                margin-right: 15px;
+                cursor: pointer;
+            }
+        }
+    }
 }
 
 .message-time {
-    display: grid;
+    display: flex;
     justify-content: end;
     font-size: 12px;
     color: #777;
+    .total-img {
+        display: flex;
+        align-items: flex-start;
+        margin-right: 10px;
+        padding-top: 3px;
+        p {
+            font-size: 14px;
+            font-weight: bold;
+            margin: 0;
+            padding-right: 10px;
+            color: #6588DE;
+        }
+        svg {
+            margin-top: 4px;
+        }
+    }
+    .time-text {
+        margin-top: 5px;
+    }
 }
 
 .other-message .message-text .message-time {
@@ -112,7 +158,119 @@
 
 .your-message .message-text {
     background: #F3BA4A;
-    color: #eee;
+    color: white;
     border: 1px solid #F3BA4A;
     border-radius: 12px 0 12px 12px;
+}
+
+.modal {
+    position: fixed;
+    z-index: 1;
+    padding-top: 5%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(121, 121, 121, 0.5);
+}
+
+
+/* Modal Content (image) */
+
+.modal-content {
+    margin: auto;
+    display: flex;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+}
+
+.viewImg :hover {
+    opacity: 0.8;
+}
+
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(0)
+    }
+    to {
+        -webkit-transform: scale(1)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+
+/* The Close Button */
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.sendFile {
+    display: flex;
+    align-items: center;
+    .downloadIcon {
+        height: 25px;
+        width: 25px;
+        background-color: transparent;
+        background-image: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%2217%22%20viewBox%3D%220%200%2010%2017%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M1.28994%2011.29C1.19621%2011.383%201.12182%2011.4936%201.07105%2011.6154C1.02028%2011.7373%200.994141%2011.868%200.994141%2012C0.994141%2012.132%201.02028%2012.2627%201.07105%2012.3846C1.12182%2012.5064%201.19621%2012.617%201.28994%2012.71L4.28994%2015.71C4.3829%2015.8037%204.4935%2015.8781%204.61536%2015.9289C4.73722%2015.9797%204.86793%2016.0058%204.99994%2016.0058C5.13195%2016.0058%205.26266%2015.9797%205.38452%2015.9289C5.50637%2015.8781%205.61698%2015.8037%205.70994%2015.71L8.70994%2012.71C8.89824%2012.5217%209.00403%2012.2663%209.00403%2012C9.00403%2011.7337%208.89824%2011.4783%208.70994%2011.29C8.52164%2011.1017%208.26624%2010.9959%207.99994%2010.9959C7.73364%2010.9959%207.47824%2011.1017%207.28994%2011.29L5.99994%2012.59V1C5.99994%200.734784%205.89458%200.48043%205.70705%200.292893C5.51951%200.105357%205.26516%200%204.99994%200C4.73472%200%204.48037%200.105357%204.29283%200.292893C4.1053%200.48043%203.99994%200.734784%203.99994%201V12.59L2.70994%2011.29C2.61698%2011.1963%202.50638%2011.1219%202.38452%2011.0711C2.26266%2011.0203%202.13195%2010.9942%201.99994%2010.9942C1.86793%2010.9942%201.73722%2011.0203%201.61536%2011.0711C1.4935%2011.1219%201.3829%2011.1963%201.28994%2011.29Z%22%20fill%3D%22%23FAFCFC%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+        border-radius: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        border: 1px solid white;
+        display: inline-block;
+        margin-right: 15px;
+    }
+    .fileIcon img {
+        height: 50px;
+        width: 50px;
+    }
+    .content {
+        font-weight: bold;
+        .fileName {
+            font-size: 14px;
+            max-width: 200px;
+            word-break: break-all;
+            padding-left: 10px;
+        }
+        .fileInfo {
+            font-size: 11px;
+            padding-left: 10px;
+        }
+    }
+}
+
+::-webkit-scrollbar {
+    height: 7px;
 }

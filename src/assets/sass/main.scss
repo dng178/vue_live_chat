@@ -39,3 +39,22 @@ body {
     overflow-y: scroll;
     position: relative;
 }
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+ ::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+ ::-webkit-scrollbar-thumb {
+    background: rgb(216, 214, 214);
+    border-radius: 10px;
+}
