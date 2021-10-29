@@ -1,6 +1,6 @@
 <template>
   <div id="friend-list">
-    <div class="conversation-list" v-for="(item, index) in friendList" :key="index">
+    <div class="conversation-list" v-for="(item, index) in friendListSort" :key="index">
       <div
         class="conversation"
         :key="item.conversationId"
@@ -37,7 +37,7 @@
           }}
         </div>
 
-        <div @change="update(item.conversationId)">
+        <div>
           <div
             v-if="
               checkImage(item.listMessage[item.listMessage.length - 1].message)
@@ -231,10 +231,16 @@ export default {
   // },
   computed: {
     ...mapGetters(["user", "friends"]),
+
+    friendListSort (){
+      let list = [].concat(this.friendList);
+      // this.activeItem =0;
+      return this.sortDate(list)
+    },
   },
   created() {
     this.addNew(1);
-    
+    // console.log(this.friendList.sort( (a, b)=> b.listMessage[b.listMessage.length -1].time - a.listMessage[a.listMessage.length -1].time));
   },
   methods: {
     clickHandler(idx) {
@@ -247,6 +253,7 @@ export default {
         this.friendList.find((x) => x.conversationId == ID)
       );
       this.scrollToEnd();
+
     },
 
     //not use yet
@@ -258,8 +265,6 @@ export default {
       this.activeItem = 0;
       // this.$bus.emit('update')
     },
-
-    
 
     remove(item) {
       this.friendList.splice(item, 1);
@@ -293,7 +298,12 @@ export default {
         }
       });
     },
-  },
+    sortDate (arr){
+      this.activeItem =0;
+      return arr.sort( (a, b)=> b.listMessage[b.listMessage.length -1].time - a.listMessage[a.listMessage.length -1].time);
+    },
+  },    
+  
 };
 </script>
 
