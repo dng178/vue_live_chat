@@ -8,212 +8,207 @@
     padding-right: 17px;
     margin-top: 10px;
     background: white;
-    input {
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 18px;
-        outline: none;
-        padding: 10px;
-        background: #FDFDFD;
-        border: 1px solid rgba(150, 169, 186, 0.7);
-        box-sizing: border-box;
-        border-radius: 14px;
-        width: calc(100vw - 780px);
-        height: 40px;
-        padding-left: 100px;
-        padding-right: 120px;
-        font-family: 'Poppins', 'Roboto', sans-serif;
-         ::placeholder {
-            color: #96A9BA;
-        }
-    }
     .chat-menu {
         display: grid;
         grid-gap: 2px;
         padding-right: 27px;
     }
-    .send {
+    .text-box {
         display: flex;
-        justify-content: center;
-        margin-left: calc(100vw - 960px);
-        width: 108px;
-        height: 40px;
-        padding: 10px;
-        background: #6588DE;
-        border-radius: 14px;
-        color: white;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 18px;
-        border: 2px solid #ddd;
-        border-left: none;
-        cursor: pointer;
-        font-family: 'Poppins', 'Roboto', sans-serif;
-        svg {
-            margin-left: 13px;
-        }
-    }
-    .attachment_icon {
-        margin-top: 10px;
-    }
-    .micro_icon {
-        margin-top: 10px;
-        margin-left: 15px;
-    }
-}
-
-.text-box {
-    display: inline-grid;
-    grid-template-columns: repeat(4, 15px);
-    grid-gap: 10px;
-}
-
-.upload_file {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    .triangle {
-        width: 0;
-        height: 0;
-        border-left: 5px solid transparent;
-        border-right: 5px solid transparent;
-        border-top: 7px solid #6588DE;
-        position: absolute;
-        margin-left: 28px;
-    }
-}
-
-
-/* The actual popup */
-
-.popup-text {
-    width: calc(100vw - 780px);
-    height: 130px;
-    background-color: #6588DE;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0px 8px 40px rgba(0, 72, 251, 0.3);
-    border-radius: 14px;
-    padding: 8px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -40px;
-    cursor: default;
-    padding-left: 10px;
-    padding-right: 10px;
-    .close {
-        background-color: white;
-        position: absolute;
-        right: 1%;
-        width: 24px;
-        height: 24px;
-        border-radius: 50%;
-        background-image: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%209%209%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M7.39038%200.0769072C7.51223%200.127676%207.62284%200.20207%207.7158%200.295798C7.80953%200.388761%207.88392%200.499362%207.93469%200.621222C7.98546%200.743081%208.0116%200.873786%208.0116%201.0058C8.0116%201.13781%207.98546%201.26852%207.93469%201.39038C7.88392%201.51223%207.80953%201.62284%207.7158%201.7158L5.4158%204.0058L7.7158%206.2958C7.80953%206.38876%207.88392%206.49936%207.93469%206.62122C7.98546%206.74308%208.0116%206.87379%208.0116%207.0058C8.0116%207.13781%207.98546%207.26852%207.93469%207.39038C7.88392%207.51223%207.80953%207.62284%207.7158%207.7158C7.62284%207.80953%207.51223%207.88392%207.39038%207.93469C7.26852%207.98546%207.13781%208.0116%207.0058%208.0116C6.87379%208.0116%206.74308%207.98546%206.62122%207.93469C6.49936%207.88392%206.38876%207.80953%206.2958%207.7158L4.0058%205.4158L1.7158%207.7158C1.62284%207.80953%201.51223%207.88392%201.39038%207.93469C1.26852%207.98546%201.13781%208.0116%201.0058%208.0116C0.873786%208.0116%200.743081%207.98546%200.621222%207.93469C0.499362%207.88392%200.388761%207.80953%200.295798%207.7158C0.20207%207.62284%200.127676%207.51223%200.0769072%207.39038C0.0261385%207.26852%200%207.13781%200%207.0058C0%206.87379%200.0261385%206.74308%200.0769072%206.62122C0.127676%206.49936%200.20207%206.38876%200.295798%206.2958L2.5958%204.0058L0.295798%201.7158C0.107495%201.52749%200.00170659%201.2721%200.0017066%201.0058C0.00170661%200.739497%200.107495%200.484102%200.295798%200.295798C0.484102%200.107495%200.739497%200.00170661%201.0058%200.0017066C1.2721%200.00170659%201.52749%200.107495%201.7158%200.295798L4.0058%202.5958L6.2958%200.295798C6.38876%200.20207%206.49936%200.127676%206.62122%200.0769072C6.74308%200.0261385%206.87379%200%207.0058%200C7.13781%200%207.26852%200.0261385%207.39038%200.0769072Z%22%20fill%3D%22%236563FF%22%2F%3E%0A%3C%2Fsvg%3E%0A");
-        background-repeat: no-repeat;
-        background-position: center;
-        cursor: pointer;
-        padding-right: 2px;
-    }
-}
-
-.file-list {
-    display: flex;
-    overflow: auto;
-    white-space: nowrap;
-    width: calc(100vw - 800px);
-    height: 120px;
-    padding-top: 18px;
-    .drop-area {
-        width: 70px;
-        height: 70px;
-        margin-left: 30px;
-        border: 1px dashed #F9FBFB;
+        border: 1px solid rgba(150, 169, 186, 0.7);
         box-sizing: border-box;
-        border-radius: 8px;
-        float: left;
-        cursor: pointer;
-        svg {
-            padding-top: 20px;
-        }
-        p {
-            padding-top: 15px;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 13px;
-            line-height: 15px;
-            text-align: center;
-            color: #F9FBFB;
+        border-radius: 14px;
+        height: 40px;
+        width: 100%;
+        .input {
+            display: flex;
+            width: 100%;
+            .icon {
+                margin-left: 15px;
+                margin-top: 10px;
+            }
+            input {
+                outline: none;
+                padding-left: 15px;
+                border: none;
+                width: calc(100% - 108px);
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                background: #FDFDFD;
+                padding-right: 15px;
+                font-family: 'Poppins', 'Roboto', sans-serif;
+                 ::placeholder {
+                    color: #96A9BA;
+                }
+            }
+            .send {
+                display: flex;
+                justify-content: center;
+                width: 108px;
+                height: 39px;
+                padding: 10px;
+                background: #6588DE;
+                border-radius: 14px;
+                color: white;
+                font-weight: bold;
+                font-size: 14px;
+                line-height: 18px;
+                box-sizing: border-box;
+                border: 1px #ddd;
+                border-left: none;
+                cursor: pointer;
+                font-family: 'Poppins', 'Roboto', sans-serif;
+                svg {
+                    margin-left: 13px;
+                }
+            }
         }
     }
-    .file-content {
-        display: flex;
-        width: auto;
-        height: 70px;
-        margin-left: 5px;
-        .file-name {
-            display: none;
-            padding: 3px 10px 0px 10px;
-            font-family: Poppins;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 13px;
-            line-height: 15px;
-            text-align: center;
-            color: #F9FBFB;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            overflow: hidden;
-            max-width: 80px;
+    .upload_file {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        .triangle {
+            width: 0;
+            height: 0;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 9px solid #6588DE;
+            position: absolute;
+            margin-left: 28px;
         }
-        .preview {
+    }
+    /* The actual popup */
+    .popup-text {
+        width: calc(100vw - 780px);
+        // width: 73vw;
+        height: 130px;
+        background-color: #6588DE;
+        color: #fff;
+        text-align: center;
+        box-shadow: 0px 8px 40px rgba(0, 72, 251, 0.3);
+        border-radius: 14px;
+        padding: 8px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 185%;
+        left: 50%;
+        margin-left: -40px;
+        cursor: default;
+        padding-left: 10px;
+        padding-right: 10px;
+        .close {
+            background-color: white;
+            position: absolute;
+            right: 1%;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-image: url("data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%209%209%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M7.39038%200.0769072C7.51223%200.127676%207.62284%200.20207%207.7158%200.295798C7.80953%200.388761%207.88392%200.499362%207.93469%200.621222C7.98546%200.743081%208.0116%200.873786%208.0116%201.0058C8.0116%201.13781%207.98546%201.26852%207.93469%201.39038C7.88392%201.51223%207.80953%201.62284%207.7158%201.7158L5.4158%204.0058L7.7158%206.2958C7.80953%206.38876%207.88392%206.49936%207.93469%206.62122C7.98546%206.74308%208.0116%206.87379%208.0116%207.0058C8.0116%207.13781%207.98546%207.26852%207.93469%207.39038C7.88392%207.51223%207.80953%207.62284%207.7158%207.7158C7.62284%207.80953%207.51223%207.88392%207.39038%207.93469C7.26852%207.98546%207.13781%208.0116%207.0058%208.0116C6.87379%208.0116%206.74308%207.98546%206.62122%207.93469C6.49936%207.88392%206.38876%207.80953%206.2958%207.7158L4.0058%205.4158L1.7158%207.7158C1.62284%207.80953%201.51223%207.88392%201.39038%207.93469C1.26852%207.98546%201.13781%208.0116%201.0058%208.0116C0.873786%208.0116%200.743081%207.98546%200.621222%207.93469C0.499362%207.88392%200.388761%207.80953%200.295798%207.7158C0.20207%207.62284%200.127676%207.51223%200.0769072%207.39038C0.0261385%207.26852%200%207.13781%200%207.0058C0%206.87379%200.0261385%206.74308%200.0769072%206.62122C0.127676%206.49936%200.20207%206.38876%200.295798%206.2958L2.5958%204.0058L0.295798%201.7158C0.107495%201.52749%200.00170659%201.2721%200.0017066%201.0058C0.00170661%200.739497%200.107495%200.484102%200.295798%200.295798C0.484102%200.107495%200.739497%200.00170661%201.0058%200.0017066C1.2721%200.00170659%201.52749%200.107495%201.7158%200.295798L4.0058%202.5958L6.2958%200.295798C6.38876%200.20207%206.49936%200.127676%206.62122%200.0769072C6.74308%200.0261385%206.87379%200%207.0058%200C7.13781%200%207.26852%200.0261385%207.39038%200.0769072Z%22%20fill%3D%22%236563FF%22%2F%3E%0A%3C%2Fsvg%3E%0A");
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+            padding-right: 2px;
+        }
+    }
+    .file-list {
+        display: flex;
+        overflow: auto;
+        white-space: nowrap;
+        width: calc(100vw - 800px);
+        height: 120px;
+        padding-top: 18px;
+        .drop-area {
             width: 70px;
             height: 70px;
-            margin-left: 15px;
-            margin-right: 15px;
-            position: relative;
-            img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 10px;
-                margin-left: 4px;
+            margin-left: 30px;
+            border: 1px dashed #F9FBFB;
+            box-sizing: border-box;
+            border-radius: 8px;
+            float: left;
+            cursor: pointer;
+            svg {
+                padding-top: 20px;
             }
-            .remove {
-                position: absolute;
-                bottom: 73%;
-                border-radius: 20px;
-                margin-left: 85%;
-                background-color: white;
-                width: 20px;
-                height: 20px;
-                background-image: url(data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%209%209%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M7.39038%200.0769072C7.51223%200.127676%207.62284%200.20207%207.7158%200.295798C7.80953%200.388761%207.88392%200.499362%207.93469%200.621222C7.98546%200.743081%208.0116%200.873786%208.0116%201.0058C8.0116%201.13781%207.98546%201.26852%207.93469%201.39038C7.88392%201.51223%207.80953%201.62284%207.7158%201.7158L5.4158%204.0058L7.7158%206.2958C7.80953%206.38876%207.88392%206.49936%207.93469%206.62122C7.98546%206.74308%208.0116%206.87379%208.0116%207.0058C8.0116%207.13781%207.98546%207.26852%207.93469%207.39038C7.88392%207.51223%207.80953%207.62284%207.7158%207.7158C7.62284%207.80953%207.51223%207.88392%207.39038%207.93469C7.26852%207.98546%207.13781%208.0116%207.0058%208.0116C6.87379%208.0116%206.74308%207.98546%206.62122%207.93469C6.49936%207.88392%206.38876%207.80953%206.2958%207.7158L4.0058%205.4158L1.7158%207.7158C1.62284%207.80953%201.51223%207.88392%201.39038%207.93469C1.26852%207.98546%201.13781%208.0116%201.0058%208.0116C0.873786%208.0116%200.743081%207.98546%200.621222%207.93469C0.499362%207.88392%200.388761%207.80953%200.295798%207.7158C0.20207%207.62284%200.127676%207.51223%200.0769072%207.39038C0.0261385%207.26852%200%207.13781%200%207.0058C0%206.87379%200.0261385%206.74308%200.0769072%206.62122C0.127676%206.49936%200.20207%206.38876%200.295798%206.2958L2.5958%204.0058L0.295798%201.7158C0.107495%201.52749%200.00170659%201.2721%200.0017066%201.0058C0.00170661%200.739497%200.107495%200.484102%200.295798%200.295798C0.484102%200.107495%200.739497%200.00170661%201.0058%200.0017066C1.2721%200.00170659%201.52749%200.107495%201.7158%200.295798L4.0058%202.5958L6.2958%200.295798C6.38876%200.20207%206.49936%200.127676%206.62122%200.0769072C6.74308%200.0261385%206.87379%200%207.0058%200C7.13781%200%207.26852%200.0261385%207.39038%200.0769072Z%22%20fill%3D%22%236563FF%22%2F%3E%0A%3C%2Fsvg%3E%0A);
-                background-repeat: no-repeat;
-                background-position: center;
-                cursor: pointer;
-            }
-            .file-image {
-                display: none;
+            p {
+                padding-top: 15px;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 15px;
+                text-align: center;
+                color: #F9FBFB;
             }
         }
-        .loading {
-            background-color: #5978C7;
-            margin-top: 6px;
-            .bar-backgroud {
-                background: #5978C7;
-                // border: 1px solid red;
-                width: 80px;
-                border-radius: 16px;
-                .bar {
-                    background-color: #F3BA4A;
-                    height: 8px;
-                    width: 0%;
+        .file-content {
+            display: flex;
+            width: auto;
+            height: 70px;
+            margin-left: 5px;
+            .file-name {
+                display: none;
+                padding: 3px 10px 0px 10px;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 13px;
+                line-height: 15px;
+                text-align: center;
+                color: #F9FBFB;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+                max-width: 80px;
+            }
+            .preview {
+                width: 70px;
+                height: 70px;
+                margin-left: 15px;
+                margin-right: 15px;
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                    margin-left: 4px;
+                }
+                .remove {
+                    position: absolute;
+                    bottom: 73%;
+                    border-radius: 20px;
+                    margin-left: 85%;
+                    background-color: white;
+                    width: 20px;
+                    height: 20px;
+                    background-image: url(data:image/svg+xml,%3Csvg%20width%3D%229%22%20height%3D%229%22%20viewBox%3D%220%200%209%209%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M7.39038%200.0769072C7.51223%200.127676%207.62284%200.20207%207.7158%200.295798C7.80953%200.388761%207.88392%200.499362%207.93469%200.621222C7.98546%200.743081%208.0116%200.873786%208.0116%201.0058C8.0116%201.13781%207.98546%201.26852%207.93469%201.39038C7.88392%201.51223%207.80953%201.62284%207.7158%201.7158L5.4158%204.0058L7.7158%206.2958C7.80953%206.38876%207.88392%206.49936%207.93469%206.62122C7.98546%206.74308%208.0116%206.87379%208.0116%207.0058C8.0116%207.13781%207.98546%207.26852%207.93469%207.39038C7.88392%207.51223%207.80953%207.62284%207.7158%207.7158C7.62284%207.80953%207.51223%207.88392%207.39038%207.93469C7.26852%207.98546%207.13781%208.0116%207.0058%208.0116C6.87379%208.0116%206.74308%207.98546%206.62122%207.93469C6.49936%207.88392%206.38876%207.80953%206.2958%207.7158L4.0058%205.4158L1.7158%207.7158C1.62284%207.80953%201.51223%207.88392%201.39038%207.93469C1.26852%207.98546%201.13781%208.0116%201.0058%208.0116C0.873786%208.0116%200.743081%207.98546%200.621222%207.93469C0.499362%207.88392%200.388761%207.80953%200.295798%207.7158C0.20207%207.62284%200.127676%207.51223%200.0769072%207.39038C0.0261385%207.26852%200%207.13781%200%207.0058C0%206.87379%200.0261385%206.74308%200.0769072%206.62122C0.127676%206.49936%200.20207%206.38876%200.295798%206.2958L2.5958%204.0058L0.295798%201.7158C0.107495%201.52749%200.00170659%201.2721%200.0017066%201.0058C0.00170661%200.739497%200.107495%200.484102%200.295798%200.295798C0.484102%200.107495%200.739497%200.00170661%201.0058%200.0017066C1.2721%200.00170659%201.52749%200.107495%201.7158%200.295798L4.0058%202.5958L6.2958%200.295798C6.38876%200.20207%206.49936%200.127676%206.62122%200.0769072C6.74308%200.0261385%206.87379%200%207.0058%200C7.13781%200%207.26852%200.0261385%207.39038%200.0769072Z%22%20fill%3D%22%236563FF%22%2F%3E%0A%3C%2Fsvg%3E%0A);
+                    background-repeat: no-repeat;
+                    background-position: center;
+                    cursor: pointer;
+                }
+                .file-image {
+                    display: none;
+                }
+            }
+            .loading {
+                background-color: #5978C7;
+                margin-top: 6px;
+                .bar-backgroud {
+                    background: #5978C7;
+                    // border: 1px solid red;
+                    width: 80px;
                     border-radius: 16px;
+                    .bar {
+                        background-color: #F3BA4A;
+                        height: 8px;
+                        width: 0%;
+                        border-radius: 16px;
+                    }
                 }
             }
         }

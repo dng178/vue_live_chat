@@ -15,20 +15,22 @@
         padding-left: 13px;
         padding-top: 20px;
         cursor: pointer;
-        svg {
-            fill: rgba(175, 188, 198, 0.5);
-             :hover,
-            .active {
+        &:hover {
+            border-bottom: 3px solid #6588DE;
+            border-radius: 2px;
+            svg {
                 fill: #6588DE;
             }
         }
-    }
-    .option-icon:hover {
-        border-bottom: 3px solid #6588DE;
-        border-radius: 2px;
-    }
-    .option-icon.active {
-        border-bottom: 3px solid #6588DE;
-        border-radius: 2px;
+        svg {
+            fill: rgba(175, 188, 198, 0.5);
+        }
+        &.active {
+            border-bottom: 3px solid #6588DE;
+            border-radius: 2px;
+            svg {
+                fill: #6588DE;
+            }
+        }
     }
 }
